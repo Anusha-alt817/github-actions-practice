@@ -21,9 +21,15 @@ jobs:
       - name: List files
         run: ls -la
         
+      
       - name: Run a simple test
         run: |
           echo "Running tests..."
-          test -f README.md
-          echo "Test passed successfully!"
+          ls -la
+          if [ -f README.md ]; then
+            echo "Test passed: README.md exists"
+          else
+            echo "Test failed: README.md not found"
+            exit 1
+          fi
 
