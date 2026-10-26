@@ -20,3 +20,10 @@ jobs:
 
       - name: List files
         run: ls -la
+        
+      - name: Run a simple test
+        run: |
+          echo "Running tests..."
+          test -f README.md
+          echo "Test passed successfully!"
+
