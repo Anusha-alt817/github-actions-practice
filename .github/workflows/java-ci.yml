@@ -33,3 +33,6 @@ jobs:
       - name: Build and test with Maven
         working-directory: java-orders-app
         run: mvn --batch-mode clean verify
+      - name: Build Docker image
+        working-directory: java-orders-app
+        run: docker build -t java-orders-app:${{ github.sha }} .
