@@ -17,8 +17,8 @@ jobs:
         with:
           python-version: '3.12'
 
-      - name: Run Python application
-        run: python app.py
+      - name: Run order application
+        run: python order_app.py
 
       - name: Install pytest
         run: python -m pip install pytest
